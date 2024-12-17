@@ -1,13 +1,243 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#cabecalho {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+  background-color: #57141f;
+}
+
+#logo {
+  height: 250px;
+  align-self: center;
+}
+#menu {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  background-color: #e07a5f;
+  list-style-type: none;
+  font-family: "Dancing Script", cursive;
+  font-size: x-large;
+}
+
+ul {
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#submenu {
+  height: 10px;
+  background-color: #57141f;
+}
+
+#conteudo {
+  display: flex;
+  justify-content: center;
+  height: 700px;
+  background-image: url("/public/img/background2.png");
+}
+
+#textoHome {
+  position: relative;
+  top: 8%;
+  right: 26%;
+  background-color: #f9f9f9;
+  padding: 5px;
+  border-radius: 15px;
+  border: 4px solid #ccc;
+  height: 50px;
+  font-family: "Dancing Script", cursive;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+#caixaTexto {
+  border: 4px solid #ccc;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 30px;
+  position: absolute;
+  right: 54%;
+  top: 29%;
+  font-size: xx-large;
+  width: 800px;
+  font-family: "Dancing Script", cursive;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+#fotoPadaria {
+  height: 530px;
+  width: 600px;
+  border-radius: 30px;
+  position: absolute;
+  left: 58%;
+  top: 30%;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+#rodape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #ebdfcd;
+}
+
+#rodape ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+#rodape img {
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  background-color: #57141f;
+  width: 50px;
+  height: auto;
+  margin: 0 10px;
+}
+
+#conteudoHist {
+  display: flex;
+  justify-content: center;
+  height: 700px;
+  background-image: url("/public/img/background2.png");
+}
+
+#textoHist {
+  position: relative;
+  top: 8%;
+  right: 0%;
+  background-color: #f9f9f9;
+  padding: 5px;
+  border-radius: 15px;
+  border: 4px solid #ccc;
+  height: 50px;
+  font-family: "Dancing Script", cursive;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+#caixaTextoHist {
+  border: 4px solid #ccc;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 30px;
+  position: absolute;
+  right: 30%;
+  top: 29%;
+  font-size: xx-large;
+  width: 800px;
+  font-family: "Dancing Script", cursive;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+#conteudoGaleria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.fotoGaleria {
+  border: 4px solid #ebdfcd;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.fotoGaleria img {
+  width: 800px;
+  height: 400px;
+  display: block;
+}
+
+.fotoGaleria:hover {
+  transform: scale(1.05);
+  box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.7);
+}
+
+.galeria img:hover {
+  transform: scale(1.1);
+}
+
+#conteudoContato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+#conteudoContato h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #57141f;
+}
+
+#formContato {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #ebdfcd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.campoFormulario {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campoFormulario label {
+  font-size: 1rem;
+  color: #57141f;
+  margin-bottom: 5px;
+}
+
+.campoFormulario input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.campoFormulario input:focus {
+  outline: none;
+  border-color: #57141f;
+}
+
+.campoFormulario button {
+  padding: 10px;
+  background-color: #57141f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.campoFormulario button:hover {
+  background-color: #e07a5f;
 }
